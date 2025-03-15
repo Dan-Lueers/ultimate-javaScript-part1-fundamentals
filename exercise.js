@@ -23,4 +23,15 @@ function max(a, b) {
   return a > b ? a : b;
 }
 
-exercise2();
+// Exercise 3  - Landscape or Portrait
+function exercise3() {
+  width = 801;
+  height = 800;
+  console.log(isLandscape(width, height));
+}
+
+function isLandscape(width, height) {
+  return width > height;
+}
+
+exercise3();
