@@ -1,3 +1,3 @@
 # ultimate-javaScript-part1-fundamentals
 
-# ultimate-javaScript-part1-fundamentals s
+A repo for all exercises from the course.
