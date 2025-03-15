@@ -62,4 +62,27 @@ function fizzBuzz(input) {
   return input;
 }
 
-exercise4();
+// #################################################################################
+// Exercise 5 - Demerit Points
+// Speed Limit = 70
+// 5 -> 1 point
+// Math.floor (1.3)
+// 12 points →> suspended
+function exercise5() {
+  console.log(checkSpeed(130));
+}
+
+function checkSpeed(speed) {
+  if (typeof speed !== 'number') return NaN;
+
+  const speedLimit = 70;
+  const threshold = 5;
+  const diff = speed - speedLimit;
+  const points = Math.floor(diff / threshold);
+
+  if (points <= 0) return 'OK';
+  else if (points >= 12) return 'License Suspended';
+  else return 'Points: ' + points;
+}
+
+exercise5();
