@@ -152,4 +152,34 @@ function sum(limit) {
   return sum;
 }
 
-exercise9();
+// #################################################################################
+// Exercise 10 - Grade
+// Average = 70
+// 0-59: F
+// 60-69: D
+// 70-79: C
+// 80-89: B
+// 90-100: A
+function exercise10() {
+  const marks = [10, 10, 84, 87, 82];
+  console.log(calculateGrade(marks));
+}
+
+function calculateGrade(marks) {
+  const avg = calculateAverage(marks);
+
+  if (avg >= 90) return 'A';
+  if (avg >= 80) return 'B';
+  if (avg >= 70) return 'C';
+  if (avg >= 60) return 'D';
+  return 'F';
+}
+
+function calculateAverage(array) {
+  const totalMarks = array.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  return totalMarks / array.length;
+}
+
+exercise10();
