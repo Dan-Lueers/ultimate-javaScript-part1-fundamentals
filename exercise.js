@@ -136,4 +136,20 @@ function showProperties(object) {
     if (typeof object[key] === 'string') console.log(key, object[key]);
 }
 
-exercise8();
+// #################################################################################
+// Exercise 9 - Sum of multiples
+// Multiples of 3: 3, 6, 9
+// Multiples of 5: 5, 10
+function exercise9() {
+  console.log(sum(10));
+}
+
+function sum(limit) {
+  let sum = 0;
+
+  for (let i = 0; i <= limit; i++) if (i % 3 === 0 || i % 5 === 0) sum += i;
+
+  return sum;
+}
+
+exercise9();
