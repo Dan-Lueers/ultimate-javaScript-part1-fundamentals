@@ -85,4 +85,16 @@ function checkSpeed(speed) {
   else return 'Points: ' + points;
 }
 
-exercise5();
+// #################################################################################
+// Exercise 6 - Even and Odd numbers
+function exercise6() {
+  showNumbers(10);
+}
+
+function showNumbers(limit) {
+  for (let i = 0; i <= limit; i++) {
+    console.log(i + ' ' + (i % 2 === 0 ? 'EVEN' : 'ODD'));
+  }
+}
+
+exercise6();
