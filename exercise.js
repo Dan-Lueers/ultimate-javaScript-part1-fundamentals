@@ -97,4 +97,25 @@ function showNumbers(limit) {
   }
 }
 
-exercise6();
+// #################################################################################
+// Exercise 7 - Count truthy
+// Falsy
+// undefined
+// null
+// ''
+// false
+// 0
+// NaN
+function exercise7() {
+  console.log(countTruthy([0, '', false, NaN, 1, true]));
+}
+
+function countTruthy(array) {
+  let truthyCount = 0;
+  array.forEach((value) => {
+    if (value) truthyCount++;
+  });
+  return truthyCount;
+}
+
+exercise7();
