@@ -284,4 +284,34 @@ function areSame(address1, address2) {
   return address1 === address2;
 }
 
-exercise15();
+// #################################################################################
+// Exercise 16 - Blog Post Object
+// title
+// body
+// author
+// views
+// comments
+// (author, body)
+// isLive
+function exercise16() {
+  const blogPost = {
+    title: 'my blog post',
+    body: 'some text....',
+    author: 'Dan the man',
+    views: 777,
+    comments: [
+      {
+        author: 'Mr. Potato Head',
+        body: 'cool post mate',
+      },
+      {
+        author: 'Keanu Reeves',
+        body: 'a bloody pencil mate',
+      },
+    ],
+    isLive: true,
+  };
+  console.log(blogPost);
+}
+
+exercise16();
