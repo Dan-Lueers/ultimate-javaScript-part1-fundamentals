@@ -182,4 +182,16 @@ function calculateAverage(array) {
   return totalMarks / array.length;
 }
 
-exercise10();
+// #################################################################################
+// Exercise 11 - Stars
+function exercise11() {
+  showStars(10);
+}
+
+function showStars(rows) {
+  for (let i = 1; i <= rows; i++) {
+    console.log('*'.repeat(i));
+  }
+}
+
+exercise11();
