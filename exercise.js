@@ -256,4 +256,32 @@ function Address(street, city, zip) {
   this.zip = zip;
 }
 
-exercise14();
+// #################################################################################
+// Exercise 15 - Object Equality
+function exercise15() {
+  const address1 = new Address('a', 'b', 'c');
+  const address2 = new Address('a', 'b', 'c');
+  const address3 = { street: 'a', city: 'b', zip: 'c', potato: 'd' };
+  let potato = address1;
+
+  console.log('are Equal: ', areEqual(address1, address3));
+  console.log('are Same: ', areSame(address1, address2));
+}
+
+function areEqual(address1, address2) {
+  console.log(Object.keys(address1).length, Object.keys(address2).length);
+  if (Object.keys(address1).length !== Object.keys(address2).length)
+    return false;
+
+  for (const key in address1) {
+    if (!address2.hasOwnProperty(key) || address2[key] !== address1[key])
+      return false;
+  }
+  return true;
+}
+
+function areSame(address1, address2) {
+  return address1 === address2;
+}
+
+exercise15();
