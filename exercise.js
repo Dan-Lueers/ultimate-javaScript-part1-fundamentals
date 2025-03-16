@@ -231,4 +231,29 @@ function showAddress(address) {
     console.log(key, ': ', address[key]);
   }
 }
-exercise13();
+
+// #################################################################################
+// Exercise 14 - Factory and Constructor Functions
+function exercise14() {
+  let addressA = createAddress('Main Street', 'Luzern', '4583');
+  showAddress(addressA);
+
+  let addressB = new Address('Potato street', 'Afghanistan', 666);
+  showAddress(addressB);
+}
+
+function createAddress(street, city, zip) {
+  return {
+    street,
+    city,
+    zip,
+  };
+}
+
+function Address(street, city, zip) {
+  this.street = street;
+  this.city = city;
+  this.zip = zip;
+}
+
+exercise14();
