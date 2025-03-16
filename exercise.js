@@ -329,4 +329,19 @@ function BlogPost(title, body, author) {
   this.isLive = false;
 }
 
-exercise17();
+// #################################################################################
+// Exercise 18 - Price Range Object
+function exercise18() {
+  const priceRanges = [
+    { label: '$', tooltip: 'cheap', minPerPerson: 0, maxPerPerson: 10 },
+    { label: '$$', tooltip: 'pricey', minPerPerson: 11, maxPerPerson: 20 },
+    { label: '$$$', tooltip: 'expensive', minPerPerson: 21, maxPerPerson: 50 },
+    {
+      label: '$$$$',
+      tooltip: 'ultra expensive',
+      minPerPerson: 51,
+      maxPerPerson: 100,
+    },
+  ];
+}
+exercise18();
