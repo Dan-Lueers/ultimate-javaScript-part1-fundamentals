@@ -197,7 +197,7 @@ function showStars(rows) {
 // #################################################################################
 // Exercise 12 - Prime
 function exercise12() {
-  showPrimes(36782164783627846832);
+  showPrimes(120);
 }
 
 function isPrime(number) {
@@ -212,4 +212,23 @@ function showPrimes(limit) {
     if (isPrime(number)) console.log(number);
 }
 
-exercise12();
+// #################################################################################
+// Exercise 13 - Address Object
+// street
+// city
+// zipCode
+// showAddress (address)
+function exercise13() {
+  const myAddress = {
+    street: 'Main Street',
+    city: 'Zurich',
+    zip: 8008,
+  };
+  showAddress(myAddress);
+}
+function showAddress(address) {
+  for (const key in address) {
+    console.log(key, ': ', address[key]);
+  }
+}
+exercise13();
