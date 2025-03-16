@@ -314,4 +314,19 @@ function exercise16() {
   console.log(blogPost);
 }
 
-exercise16();
+// #################################################################################
+// Exercise 17 - Constructor Functions
+function exercise17() {
+  const newPost = new BlogPost('wicked article', 'some text...', 'dan the man');
+  console.log(newPost);
+}
+function BlogPost(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.views = 0;
+  this.comments = [];
+  this.isLive = false;
+}
+
+exercise17();
