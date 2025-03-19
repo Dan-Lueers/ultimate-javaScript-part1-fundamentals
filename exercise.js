@@ -344,6 +344,7 @@ function exercise18() {
     },
   ];
 }
+
 // #################################################################################
 // Exercise 19 - Array from range
 function exercise19() {
@@ -358,4 +359,15 @@ function arrayFromRange(min, max) {
   return numbers;
 }
 
-exercise19();
+// #################################################################################
+// Exercise 20 - includes
+function exercise20() {
+  console.log(includes([1, 2, 3, 4, 5], 1));
+}
+
+function includes(array, searchElement) {
+  for (const element of array) if (element === searchElement) return true;
+  return false;
+}
+
+exercise20();
