@@ -344,4 +344,18 @@ function exercise18() {
     },
   ];
 }
-exercise18();
+// #################################################################################
+// Exercise 19 - Array from range
+function exercise19() {
+  const numbers = arrayFromRange(8, 14);
+  console.log(numbers);
+}
+
+function arrayFromRange(min, max) {
+  const numbers = [];
+  for (let i = min; i <= max; i++) numbers.push(i);
+
+  return numbers;
+}
+
+exercise19();
