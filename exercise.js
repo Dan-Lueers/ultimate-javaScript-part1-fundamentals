@@ -408,4 +408,20 @@ function move(array, index, offset) {
   return output;
 }
 
-exercise22();
+// #################################################################################
+// Exercise 23 - Count occurences
+function exercise23() {
+  const numbers = [1, 2, 3, 4, 2, 2, 2, 5];
+  const count = countOccurences(numbers, 2);
+  console.log('occurences: ', count);
+}
+
+function countOccurences(array, searchElement) {
+  return array.reduce((accumulator, current) => {
+    const occurence = current === searchElement ? 1 : 0;
+    console.log(accumulator, current, searchElement);
+    return accumulator + occurence;
+  }, 0);
+}
+
+exercise23();
