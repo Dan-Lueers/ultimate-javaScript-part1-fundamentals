@@ -456,4 +456,47 @@ function getMaxReduce(array) {
     );
 }
 
-exercise24();
+// #################################################################################
+// Exercise 25 - Get Max
+// All the movies in 2018 with rating > 4
+// Sort them by their rating
+// Descending order
+// Pick their title
+// Result should be:
+//'b'
+//'a'
+function exercise25() {
+    const movies = [
+        { title: 'a', year: 2018, rating: 4.5 },
+        { title: 'b', year: 2018, rating: 4.7 },
+        { title: 'c', year: 2018, rating: 3 },
+        { title: 'd', year: 2017, rating: 4.5 },
+    ];
+    const filtered = filterMovies(movies, 2018, 4);
+    const sorted = sortMovies(filtered);
+    console.log(sorted);
+    for (const movie of sorted) {
+        console.log(movie.title);
+    }
+
+    // Mosh solution
+    const titles = movies
+        .filter((m) => m.year === 2018 && m.rating >= 4)
+        .sort((a, b) => a.rating - b.rating)
+        .reverse()
+        .map((m) => m.title);
+    console.log('movies: ', titles);
+}
+
+function filterMovies(movies, year, minRating) {
+    let filtered = [...movies];
+    return filtered.filter(
+        (movie) => movie.year === year && movie.rating >= minRating
+    );
+}
+
+function sortMovies(movies) {
+    return [...movies].sort((a, b) => b.rating - a.rating);
+}
+
+exercise25();
